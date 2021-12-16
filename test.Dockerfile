@@ -16,5 +16,3 @@ RUN kubectl get services
 RUN kubectl get pods -o wide
 RUN kubectl get nodes -o wide
 
-
-
