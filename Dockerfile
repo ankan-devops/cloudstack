@@ -1,4 +1,7 @@
-FROM amazon/aws-cli
+FROM docker
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+RUN unzip awscliv2.zip
+RUN ./aws/install
 RUN aws configure set aws_access_key_id AKIAUWPUR4LTZZRRSOX2
 RUN aws configure set aws_secret_access_key 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
 RUN aws configure set default.region ap-southeast-1
