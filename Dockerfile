@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 RUN apt-get update -y
 RUN apt-get install curl unzip docker -y
-RUN service docker.service start
+RUN service docker start
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 RUN unzip awscliv2.zip
 RUN ./aws/install
