@@ -45,6 +45,6 @@ jobs:
     - name: Fill in the new image ID in the Amazon ECS task definition
       id: task-def
       run: |
-        docker build -t hello .
+        docker build -t hello --build-arg ID=${{ secrets.AWS_ACCESS_KEY_ID }} SECRETS=${{ secrets.AWS_SECRET_ACCESS_KEY }} .
         docker run hello
         
