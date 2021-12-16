@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: back-end
-          image: 264322735540.dkr.ecr.ap-southeast-1.amazonaws.com/cloudstack:latest
+          image: 323172295399.dkr.ecr.ap-southeast-1.amazonaws.com/cloudstack:latest
           ports:
             - containerPort: 80

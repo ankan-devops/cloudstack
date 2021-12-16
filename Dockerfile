@@ -1,6 +1,6 @@
 FROM amazon/aws-cli
-RUN aws configure set aws_access_key_id AKIAT3CW43W2B2FTAOXP
-RUN aws configure set aws_secret_access_key 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
+RUN aws configure set aws_access_key_id AKIAUWPUR4LTZZRRSOX2
+RUN aws configure set aws_secret_access_key 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
 RUN aws configure set default.region ap-southeast-1
 RUN aws configure set default.output json
 RUN curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.21.2/2021-07-05/bin/linux/amd64/kubectl
@@ -10,7 +10,7 @@ RUN mv ./kubectl /usr/bin/kubectl
 RUN aws eks --region ap-southeast-1 update-kubeconfig --name EKS-Demo-Cluster
 COPY deployment.yaml .
 COPY service.yaml .
-RUN aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin 264322735540.dkr.ecr.ap-southeast-1.amazonaws.com
+RUN aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin 323172295399.dkr.ecr.ap-southeast-1.amazonaws.com
 RUN kubectl apply -f deployment.yaml
 RUN kubectl apply -f service.yaml
 RUN kubectl get services
