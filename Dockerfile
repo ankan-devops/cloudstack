@@ -1,4 +1,6 @@
-FROM docker
+FROM ubuntu:latest
+RUN apt-get update -y
+RUN apt-get install docker -y
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 RUN unzip awscliv2.zip
 RUN ./aws/install
